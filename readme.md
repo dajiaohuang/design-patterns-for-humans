@@ -1255,7 +1255,7 @@ class SecuredDoor implements Door
         $this->door = $door;
     }
 
-    public function open($password)
+    public function open($password = null)
     {
         if ($this->authenticate($password)) {
             $this->door->open();
